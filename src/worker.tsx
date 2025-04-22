@@ -1,0 +1,29 @@
+import { defineApp, ErrorResponse } from "@redwoodjs/sdk/worker";
+import { route, render, prefix } from "@redwoodjs/sdk/router";
+import { Document } from "@/app/Document";
+import { Home } from "@/app/pages/Home";
+import { setCommonHeaders } from "@/app/headers";
+import { userRoutes } from "@/app/pages/user/routes";
+import { sessions, setupSessionStore } from "./session/store";
+import { Session } from "./session/durableObject";
+import { db, setupDb } from "./db";
+import type { User } from "@prisma/client";
+import { env } from "cloudflare:workers";
+import Redirect from "./app/pages/Redirect";
+import Here from "./app/pages/Here";
+
+export type AppContext = {
+};
+
+export default defineApp([
+  setCommonHeaders(),
+  async ({ ctx, request, headers }) => {
+    await setupDb(env);
+  },
+  render(Document, [
+    route("/", () => new Response("Hello, World!")),
+    route("/redirect", Redirect),
+    route("/redirect/:id", Redirect),
+    route("/here", Here),
+  ]),
+]);
