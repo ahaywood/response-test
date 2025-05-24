@@ -1,4 +1,4 @@
-import { RequestInfo } from "@redwoodjs/sdk/worker";
+import { RequestInfo } from "sdk/worker";
 
 export function Home({ ctx }: RequestInfo) {
   return (

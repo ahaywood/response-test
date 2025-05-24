@@ -9,7 +9,7 @@ import {
 } from "@simplewebauthn/server";
 
 import { sessions } from "@/session/store";
-import { requestInfo } from "@redwoodjs/sdk/worker";
+import { requestInfo } from "sdk/worker";
 import { db } from "@/db";
 import { env } from "cloudflare:workers";
 
