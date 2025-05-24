@@ -27,9 +27,9 @@
     "types": "tsc"
   },
   "dependencies": {
-    "@prisma/adapter-d1": "~6.5.0",
-    "@prisma/client": "~6.5.0",
-    "@redwoodjs/sdk": "0.0.68",
+    "@prisma/adapter-d1": "~6.8.2",
+    "@prisma/client": "~6.8.2",
+    "rwsdk": "0.0.85",
     "@simplewebauthn/browser": "^13.1.0",
     "@simplewebauthn/server": "^13.1.1"
   },
@@ -37,10 +37,10 @@
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "prisma": "~6.5.0",
+    "prisma": "~6.8.2",
     "typescript": "^5.8.3",
     "vite": "^6.2.5",
-    "wrangler": "^4.8.0"
+    "wrangler": "^4.16.0"
   },
   "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
 }
